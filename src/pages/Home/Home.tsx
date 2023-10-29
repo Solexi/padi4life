@@ -68,7 +68,7 @@ const Home: React.FC = () => {
                 </Box>
                 <Flex
                     h={["340px", "500px"]}
-                    w={["380px","400px"]}
+                    w={["350px","400px"]}
                     mt={"80px"}
                     // mx={["4vw", ""]}
                     justify={["center", "center"]}
