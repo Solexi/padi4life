@@ -19,7 +19,6 @@ const Home: React.FC = () => {
             flexDir={"column"}
             fontFamily={"Poppins"}
             w={["100vw", "100%"]}
-        // align={"center"}
         >
             <Box
                 w={"100vw"}
@@ -29,20 +28,20 @@ const Home: React.FC = () => {
             </Box>
             <Box
                 display={"flex"}
-                flexDir={["column", "column", "row"]}
-                px={["","200px"]}
-                justifyContent={"space-between"}
+                flexDir={["column", "column", "column", "row"]}
+                px={["", "", "", "200px"]}
+                justifyContent={["","", "center", "space-between"]}
                 mb={["", "80px"]}
             >
                 <Box
                     display={"block"}
-                    textAlign={["center", "center", "left"]}
-                    w={["100vw", "500px"]}
+                    textAlign={["center", "center", "center", "left"]}
+                    w={["100vw", "100vw", "100vw", "500px"]}
                 >
                     <Heading
-                        fontSize={["50px", "36px", "42px", "48px", "50px", "58px"]}
+                        fontSize={["50px", "36px", "60px", "48px", "50px", "58px"]}
                         fontWeight={700}
-                        lineHeight={["70px","90px"]}
+                        lineHeight={["70px", "70px", "90px"]}
                         mt={"120px"}
                         color={"#412D95"}
                     >
@@ -68,7 +67,7 @@ const Home: React.FC = () => {
                 </Box>
                 <Flex
                     h={["340px", "500px"]}
-                    w={["95vw","400px"]}
+                    w={["95vw", "100vw", "100vw", "400px"]}
                     mt={"80px"}
                     // mx={["4vw", ""]}
                     justify={["center", "center"]}
@@ -112,17 +111,16 @@ const Home: React.FC = () => {
                 </Flex>
             </Box>
             <Flex
-                px={["","80px"]}
+                px={["", "80px"]}
                 bg={"#ABA5E5"}
                 py={"50px"}
                 mb={"40px"}
                 justifyContent={"center"}
             >
                 <Grid
-                    // templateRows={['repeat(3, 1fr)', '']}
-                    templateColumns={['repeat(1, 3fr)','repeat(5, 3fr)']}
+                    templateColumns={['repeat(1, 3fr)', 'repeat(2, 3fr)', '' ,'repeat(5, 3fr)']}
                     alignSelf={"center"}
-                    gap={["5vw","2vw"]}
+                    gap={["5vw", "5vw", "5vw", "2vw"]}
                 >
                     <GridItem>
                         <Box
@@ -308,7 +306,7 @@ const Home: React.FC = () => {
             </Flex>
             <Flex
                 mt={["40px", "60px"]}
-                px={["2vw", "15vw"]}
+                px={["2.5vw", "5vw", "5vw", "15vw"]}
                 flexDir={["column", "row"]}
                 justifyContent={"space-between"}
                 mb={"80px"}
@@ -337,9 +335,9 @@ const Home: React.FC = () => {
                         </Text>
                     </Flex>
                     <Heading
-                        fontSize={["50px", "36px", "42px", "48px", "50px"]}
+                        fontSize={["50px", "42px", "42px", "48px", "50px"]}
                         fontWeight={700}
-                        lineHeight={["60px", "90px"]}
+                        lineHeight={["60px", "70px", "70px", "90px"]}
                         color={"#412D95"}
                     >
                         Connect With Others And Earn
@@ -375,7 +373,7 @@ const Home: React.FC = () => {
             <Flex
                 bg={"#ABA5E5"}
                 mt={"60px"}
-                px={["7vw", "15vw"]}
+                px={["7vw", "5vw", "5vw", "15vw"]}
                 py={"100px"}
                 flexDir={["column", "row"]}
                 justifyContent={["center", "space-between"]}
@@ -398,9 +396,9 @@ const Home: React.FC = () => {
                     />
                 </Flex>
                 <Flex
-                    w={["90vw","500px"]}
+                    w={["90vw", "", "400px", "500px"]}
                     flexDir={"column"}
-                    mt={"40px"}
+                    mt={["", "", "20px", "40px"]}
                 >
                     <Flex
                         mb={"20px"}
@@ -423,7 +421,7 @@ const Home: React.FC = () => {
                     <Heading
                         fontSize={["50px", "36px", "42px", "48px", "50px"]}
                         fontWeight={700}
-                        lineHeight={"90px"}
+                        lineHeight={["60px", "70px", "70px", "90px"]}
                         color={"#412D95"}
                     >
                        Get Quick And Safe Loan
@@ -440,7 +438,7 @@ const Home: React.FC = () => {
             </Flex>
             <Flex
                 mt={"60px"}
-                px={["2.5vw", "15vw"]}
+                px={["2.5vw", "5vw", "5vw", "15vw"]}
                 flexDir={["column", "row"]}
                 justifyContent={["center", "space-between"]}
                 mb={"80px"}
@@ -469,9 +467,9 @@ const Home: React.FC = () => {
                         </Text>
                     </Flex>
                     <Heading
-                        fontSize={"50px"}
+                        fontSize={["50px", "36px", "42px", "48px", "50px"]}
                         fontWeight={700}
-                        lineHeight={"90px"}
+                        lineHeight={["60px", "70px", "70px", "90px"]}
                         color={"#412D95"}
                     >
                         Manage Your Funds Perfectly

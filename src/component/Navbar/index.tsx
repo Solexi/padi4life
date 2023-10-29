@@ -57,6 +57,8 @@ const Navbar: React.FC = () => {
                 </ChakraLink>
             </Flex>
             <Button
+                fontSize={["16px", ""]}
+                px={["30px", ""]}
                 bg={"#412D95"}
                 _hover={{ bg: "#000000",transition: "0.5s"}}
                 color={"#FFFFFF"}

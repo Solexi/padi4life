@@ -10,11 +10,11 @@ const Download: React.FC = () => {
             flexDir={["column","row"]}
             w={"80%"}
             h={["800px","400px"]}
-            mx={"10%"}
+            mx={["10%"]}
             bgImage={download}
             zIndex={8}
             borderRadius={"3xl"}
-            px={["", "50px"]}
+            px={["", "", "10px", "50px"]}
             overflow={"clip"}
             justifyContent={"space-between"}
             align={["center", ""]}
@@ -23,20 +23,20 @@ const Download: React.FC = () => {
                 display={"flex"}
                 flexDir={"column"}
                 alignItems={"center"}
-                py={"5%"}
-                w={["90%", "40%"]}
+                py={["5%", "2%", "2%", "5%"]}
+                w={["90%", "50%", "60%", "40%"]}
             >
                 <Heading
-                    textAlign={["center", "left"]}
-                    fontSize={["40px", "44px"]}
-                    fontWeight={600}
+                    textAlign={["center", "center", "center", "left"]}
+                    fontSize={["40px", "28px", "28px", "44px"]}
+                    fontWeight={[600, 700, 700, 600]}
                     color={"#FFFFFF"}
                     mb={"20px"}
                 >
                     Download the App
                 </Heading>
                 <Text
-                    fontSize={["21px", "22px"]}
+                    fontSize={["21px", "17px", "17px", "22px"]}
                     fontWeight={500}
                     color={"#808080"}
                     textAlign={"center"}
@@ -44,7 +44,7 @@ const Download: React.FC = () => {
                     Connect with your friends, manage your money, get small loans when you need them. Download now to get started.
                 </Text>
                 <Flex
-                    flexDir={["column", "row"]}
+                    flexDir={["column", "column", "row", "row"]}
                     gap={"25px"}
                     mt={"30px"}
                 >
@@ -52,8 +52,8 @@ const Download: React.FC = () => {
                         as="button"
                         display={"flex"}
                         flexDir={"row"}
-                        px={"30px"}
-                        w={"201px"}
+                        px={["30px", "15px", "15px", "30px"]}
+                        w={["201px", "150px", "150px", "201px"]}
                         h={"58px"}
                         bg={"#FFFFFF"}
                         align={"center"}
@@ -67,7 +67,7 @@ const Download: React.FC = () => {
                         />
                         <Text
                             color={"#1E1446"}
-                            fontSize={"22.5px"}
+                            fontSize={["22.5px", "18px", "18px", "22.5px"]}
                             fontWeight={500}
                         >
                             App Store
@@ -77,8 +77,8 @@ const Download: React.FC = () => {
                         as="button"
                         display={"flex"}
                         flexDir={"row"}
-                        px={"15px"}
-                        w={"201px"}
+                        px={["30px", "15px", "15px", "30px"]}
+                        w={["201px", "150px", "150px", "201px"]}
                         h={"58px"}
                         bg={"#FFFFFF"}
                         align={"center"}
@@ -93,7 +93,7 @@ const Download: React.FC = () => {
                         />
                         <Text
                             color={"#1E1446"}
-                            fontSize={"22.5px"}
+                            fontSize={["22.5px", "17px", "17px", "22.5px"]}
                             fontWeight={500}
                         >
                             Google Play
@@ -103,7 +103,6 @@ const Download: React.FC = () => {
             </Box>
             <Flex
                 w={["320px", "400px"]}
-                // h={"300px"}
                 mt={["40px", "60px"]}
                 justifyContent={"center"}
             >
@@ -111,7 +110,6 @@ const Download: React.FC = () => {
                     src={features}
                     w={"400px"}
                     h={"614px"}
-                    // objectFit={"cover"}
                     borderRadius={"3xl"}
                 />
             </Flex>
