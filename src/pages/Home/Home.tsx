@@ -18,7 +18,7 @@ const Home: React.FC = () => {
         <Flex
             flexDir={"column"}
             fontFamily={"Poppins"}
-            w={"100%"}
+            w={["100vw", "100%"]}
         // align={"center"}
         >
             <Box
@@ -29,25 +29,29 @@ const Home: React.FC = () => {
             </Box>
             <Box
                 display={"flex"}
-                flexDir={"row"}
-                px={"200px"}
+                flexDir={["column", "column", "row"]}
+                px={["","200px"]}
                 justifyContent={"space-between"}
-                mb={"80px"}
+                mb={["", "80px"]}
             >
                 <Box
                     display={"block"}
-                    w={"500px"}
+                    textAlign={["center", "center", "left"]}
+                    w={["100vw", "500px"]}
                 >
                     <Heading
-                        fontSize={"58px"}
+                        fontSize={["50px", "36px", "42px", "48px", "50px", "58px"]}
                         fontWeight={700}
-                        lineHeight={"90px"}
+                        lineHeight={["70px","90px"]}
                         mt={"120px"}
                         color={"#412D95"}
                     >
                         Your All in One Financial Hub
                     </Heading>
-                    <Text>
+                    <Text
+                        fontSize={["14px", ""]}
+                        mt={["15px", ""]}
+                    >
                         Padi4Life connects you with friends, local services, manage your money,
                         get small loans when you need them. It is a financial platform that
                         helps you manage your finances and achieve your financial goals.
@@ -63,22 +67,22 @@ const Home: React.FC = () => {
                     </Button>
                 </Box>
                 <Flex
-                    h={"500px"}
-                    w={"400px"}
+                    h={["340px", "500px"]}
+                    w={["400px","400px"]}
                     mt={"80px"}
-                    justify={"center"}
-                // alignItems={"center"}
+                    // mx={["4vw", ""]}
+                    justify={["center", "center"]}
                 >
                     <Flex
                         bg={"#897BDC"}
-                        h={"300px"}
-                        w={"300px"}
+                        h={["170px","300px"]}
+                        w={["170px","300px"]}
                         borderRadius={"50%"}
                         justify={"center"}
                         pt={"50px"}
                     >
                         <Box
-                            h={"305px"}
+                            h={["150px","305px"]}
                             display={"flex"}
                             flexDir={"row"}
                             transformOrigin={"center"}
@@ -87,45 +91,38 @@ const Home: React.FC = () => {
                             <Image
                                 transform={'rotate(-30deg)'}
                                 src={social}
-                                w={"200px"}
-                                h={"309px"}
+                                w={["90px", "200px"]}
+                                h={["180px", "309px"]}
                             />
                             <Image
                                 transform={'rotate(0deg)'}
                                 src={splash}
-                                w={"200px"}
-                                h={"409px"}
+                                w={["100px", "200px"]}
+                                h={["210px", "409px"]}
                                 zIndex={2}
                             />
                             <Image
                                 transform={'rotate(30deg)'}
                                 src={wallet}
-                                w={"200px"}
-                                h={"309px"}
+                                w={["90px", "200px"]}
+                                h={["180px", "309px"]}
                             />
-                            {/* <Image
-                                zIndex={"2"}
-                                src={zigzag}
-                                w={"200px"}
-                                position={"relative"}
-                                bottom={"120px"}
-                            /> */}
                         </Box>
                     </Flex>
                 </Flex>
             </Box>
             <Flex
-                px={"80px"}
+                px={["","80px"]}
                 bg={"#ABA5E5"}
                 py={"50px"}
                 mb={"40px"}
                 justifyContent={"center"}
             >
                 <Grid
-                    // templateRows='repeat(2, 1fr)'
-                    templateColumns='repeat(5, 3fr)'
+                    templateRows={['repeat(3, 1fr)', '']}
+                    templateColumns={['repeat(1, 3fr)','repeat(5, 3fr)']}
                     alignSelf={"center"}
-                    gap={"2vw"}
+                    gap={["5vw","2vw"]}
                 >
                     <GridItem>
                         <Box
@@ -310,14 +307,14 @@ const Home: React.FC = () => {
                 </Grid>
             </Flex>
             <Flex
-                mt={"60px"}
-                px={"15vw"}
-                flexDir={"row"}
+                mt={["40px", "60px"]}
+                px={["2vw", "15vw"]}
+                flexDir={["column", "row"]}
                 justifyContent={"space-between"}
                 mb={"80px"}
             >
                 <Flex
-                    w={"500px"}
+                    w={["90vw","500px"]}
                     flexDir={"column"}
                     mt={"40px"}
                 >
@@ -340,9 +337,9 @@ const Home: React.FC = () => {
                         </Text>
                     </Flex>
                     <Heading
-                        fontSize={"50px"}
+                        fontSize={["50px", "36px", "42px", "48px", "50px"]}
                         fontWeight={700}
-                        lineHeight={"90px"}
+                        lineHeight={["60px", "90px"]}
                         color={"#412D95"}
                     >
                         Connect With Others And Earn
@@ -351,13 +348,14 @@ const Home: React.FC = () => {
                         fontSize={"18px"}
                         fontWeight={300}
                         mt={"20px"}
+                        mb={["30px", ""]}
                     >
                         Connect on Padi4Life, share resources, and earn rewards through 
                         social and financial interactions, making money management a social experience
                     </Text>
                 </Flex>
                 <Flex
-                    w={"500px"}
+                    w={["95vw","500px"]}
                     bgImage={connect}
                     borderRadius={"20px"}
                     justify={"center"}
@@ -377,10 +375,10 @@ const Home: React.FC = () => {
             <Flex
                 bg={"#ABA5E5"}
                 mt={"60px"}
-                px={"15vw"}
+                px={["7vw", "15vw"]}
                 py={"100px"}
-                flexDir={"row"}
-                justifyContent={"space-between"}
+                flexDir={["column", "row"]}
+                justifyContent={["center", "space-between"]}
                 mb={"80px"}
             >
                 <Flex
@@ -400,7 +398,7 @@ const Home: React.FC = () => {
                     />
                 </Flex>
                 <Flex
-                    w={"500px"}
+                    w={["90vw","500px"]}
                     flexDir={"column"}
                     mt={"40px"}
                 >
@@ -423,7 +421,7 @@ const Home: React.FC = () => {
                         </Text>
                     </Flex>
                     <Heading
-                        fontSize={"50px"}
+                        fontSize={["50px", "36px", "42px", "48px", "50px"]}
                         fontWeight={700}
                         lineHeight={"90px"}
                         color={"#412D95"}
@@ -442,13 +440,13 @@ const Home: React.FC = () => {
             </Flex>
             <Flex
                 mt={"60px"}
-                px={"15vw"}
-                flexDir={"row"}
-                justifyContent={"space-between"}
+                px={["2.5vw", "15vw"]}
+                flexDir={["column", "row"]}
+                justifyContent={["center", "space-between"]}
                 mb={"80px"}
             >
                 <Flex
-                    w={"500px"}
+                    w={["95vw","500px"]}
                     flexDir={"column"}
                     mt={"40px"}
                 >
@@ -488,7 +486,7 @@ const Home: React.FC = () => {
                     </Text>
                 </Flex>
                 <Flex
-                    w={"500px"}
+                    w={["95vw","500px"]}
                     bgImage={connect}
                     borderRadius={"20px"}
                     justify={"center"}

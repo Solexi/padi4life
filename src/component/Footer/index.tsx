@@ -16,11 +16,13 @@ const Footer: React.FC = () => {
                 <Download />
             </Box>
             <Flex
-                flexDir={"row"}
+                textAlign={["center", "left"]}
+                flexDir={["column", "row"]}
+                gap={[10, ""]}
                 justify={"space-between"}
                 mt={"-100px"}
                 mb={"20px"}
-                mx={"5%"}
+                mx={["25%", "5%"]}
             >
                 <Flex
                     flexDir={"column"}
@@ -56,19 +58,19 @@ const Footer: React.FC = () => {
                         color={"#FFFFFF"}
                     >
                         <ChakraLink
-                            href="/meet-the-team"
+                            href="/"
                             _hover={{ textDecoration: "none", borderBottom: "0.5px solid #897BDC", transition: "0.5s" }}
                         >
                             Products
                         </ChakraLink>
                         <ChakraLink
-                            href="/meet-the-team"
+                            href="/"
                             _hover={{ textDecoration: "none", borderBottom: "0.5px solid #897BDC", transition: "0.5s" }}
                         >
                             Support
                         </ChakraLink>
                         <ChakraLink
-                            href="/meet-the-team"
+                            href="/"
                             _hover={{ textDecoration: "none", borderBottom: "0.5px solid #897BDC", transition: "0.5s" }}
                         >
                             Terms
@@ -89,19 +91,32 @@ const Footer: React.FC = () => {
                         href="/"
                         my={"10px"}
                         color={"#FFFFFF"}
-                        _hover={{ textDecoration: "none", borderBottom: "0.5px solid #897BDC", transition: "0.5s" }}
+                        _hover={{ textDecoration: "none", color: "#897BDC", transition: "0.2s" }}
                     >
                         Help Docs $ FAQs
                     </ChakraLink>
                 </Flex>
+                <ChakraLink
+                    mx={"16%"}
+                    color={"#FFFFFF"}
+                    display={["flex", "none"]}
+                    fontWeight={600}
+                    fontSize={"18px"}
+                    href="/meet-the-team"
+                    _hover={{ textDecoration: "none", color: "#897BDC", transition: "0.2s" }}
+                >
+                    Meet the Team
+                </ChakraLink>
             </Flex>
             <Divider w={"90%"} mx={"5%"} h={"20px"} />
             <Flex
-                flexDir={"row"}
+                textAlign={["center", "left"]}
+                flexDir={["column", "row"]}
                 justify={"space-between"}
-                mx={"5%"}
+                mx={["5%"]}
                 mt={"20px"}
                 mb={"10px"}
+                gap={[10, ""]}
             >
                 <Flex
                     flexDir={"column"}
@@ -122,14 +137,15 @@ const Footer: React.FC = () => {
                     </Text>
                 </Flex>
                 <Flex
-                    flexDir={"row"}
+                    align={"center"}
+                    flexDir={["column", "row"]}
                     gap={"6px"}
                 >
                     <Text color={"#FFFFFF"}>Follow us: </Text>
-                    <Icon as={FaFacebook} color= {"#FFFFFF"} w={"20px"} h={"20px"}/>
-                    <Icon as={FaTwitter} color= {"#FFFFFF"} w={"20px"} h={"20px"}/>
-                    <Icon as={FaInstagram} color= {"#FFFFFF"} w={"20px"} h={"20px"}/>
-                    <Icon as={FaLinkedin} color= {"#FFFFFF"} w={"20px"} h={"20px"}/>
+                    <Icon as={FaFacebook} color={"#FFFFFF"} w={"20px"} h={"20px"} />
+                    <Icon as={FaTwitter} color={"#FFFFFF"} w={"20px"} h={"20px"} />
+                    <Icon as={FaInstagram} color={"#FFFFFF"} w={"20px"} h={"20px"} />
+                    <Icon as={FaLinkedin} color={"#FFFFFF"} w={"20px"} h={"20px"} />
                 </Flex>
             </Flex>
         </Flex>

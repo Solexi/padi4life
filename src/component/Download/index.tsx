@@ -5,28 +5,30 @@ import features from "../../images/features.png"
 
 const Download: React.FC = () => {
     return (
-        <Box
+        <Flex
             display={"flex"}
-            flexDir={"row"}
+            flexDir={["column","row"]}
             w={"80%"}
-            h={"400px"}
+            h={["800px","400px"]}
             mx={"10%"}
             bgImage={download}
             zIndex={8}
             borderRadius={"3xl"}
-            px={"50px"}
+            px={["", "50px"]}
             overflow={"clip"}
             justifyContent={"space-between"}
+            align={["center", ""]}
         >
             <Box
                 display={"flex"}
                 flexDir={"column"}
                 alignItems={"center"}
                 py={"5%"}
-                w={"40%"}
+                w={["90%", "40%"]}
             >
                 <Heading
-                    fontSize={"44px"}
+                    textAlign={["center", "left"]}
+                    fontSize={["40px", "44px"]}
                     fontWeight={600}
                     color={"#FFFFFF"}
                     mb={"20px"}
@@ -34,7 +36,7 @@ const Download: React.FC = () => {
                     Download the App
                 </Heading>
                 <Text
-                    fontSize={"22px"}
+                    fontSize={["21px", "22px"]}
                     fontWeight={500}
                     color={"#808080"}
                     textAlign={"center"}
@@ -42,7 +44,7 @@ const Download: React.FC = () => {
                     Connect with your friends, manage your money, get small loans when you need them. Download now to get started.
                 </Text>
                 <Flex
-                    dir="row"
+                    flexDir={["column", "row"]}
                     gap={"25px"}
                     mt={"30px"}
                 >
@@ -100,9 +102,9 @@ const Download: React.FC = () => {
                 </Flex>
             </Box>
             <Flex
-                w={"400px"}
+                w={["320px", "400px"]}
                 // h={"300px"}
-                mt={"60px"}
+                mt={["40px", "60px"]}
                 justifyContent={"center"}
             >
                 <Image
@@ -113,7 +115,7 @@ const Download: React.FC = () => {
                     borderRadius={"3xl"}
                 />
             </Flex>
-        </Box>
+        </Flex>
     )
 }
 
