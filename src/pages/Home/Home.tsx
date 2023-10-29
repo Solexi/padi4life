@@ -68,7 +68,7 @@ const Home: React.FC = () => {
                 </Box>
                 <Flex
                     h={["340px", "500px"]}
-                    w={["400px","400px"]}
+                    w={["380px","400px"]}
                     mt={"80px"}
                     // mx={["4vw", ""]}
                     justify={["center", "center"]}
@@ -119,7 +119,7 @@ const Home: React.FC = () => {
                 justifyContent={"center"}
             >
                 <Grid
-                    templateRows={['repeat(3, 1fr)', '']}
+                    // templateRows={['repeat(3, 1fr)', '']}
                     templateColumns={['repeat(1, 3fr)','repeat(5, 3fr)']}
                     alignSelf={"center"}
                     gap={["5vw","2vw"]}
