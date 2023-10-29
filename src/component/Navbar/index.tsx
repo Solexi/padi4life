@@ -1,10 +1,10 @@
-import { Box, Flex, Spacer, Button, useColorMode, Link as ChakraLink, Image, LinkOverlay } from "@chakra-ui/react";
+import { Box, Flex, Button, Link as ChakraLink, Image} from "@chakra-ui/react";
 import PadiLogo from "../../images/Logo.png";
 import 'typeface-poppins';
 // import { Link } from "react-router-dom";
 
 const Navbar: React.FC = () => {
-    const { colorMode, toggleColorMode } = useColorMode();
+    // const { colorMode, toggleColorMode } = useColorMode();
 
     return (
         <Flex
@@ -61,28 +61,11 @@ const Navbar: React.FC = () => {
             <Button
                 bg={"#412D95"}
                 _hover={{ bg: "#000000",transition: "0.5s"}}
+                color={"#FFFFFF"}
             >
                 Get the app
             </Button>
         </Flex>
-        // <Box bg={colorMode === "light" ? "gray.100" : "gray.900"} px={4}>
-        //     <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
-        //         <Box>
-        //             <Link href="/">
-        //                 <Button variant="ghost">Home</Button>
-        //             </Link>
-        //             <Link href="/about">
-        //                 <Button variant="ghost">About</Button>
-        //             </Link>
-        //         </Box>
-        //         <Spacer />
-        //         <Box>
-        //             <Button onClick={toggleColorMode}>
-        //                 Toggle {colorMode === "light" ? "Dark" : "Light"}
-        //             </Button>
-        //         </Box>
-        //     </Flex>
-        // </Box>
     );
 };
 

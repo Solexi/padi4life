@@ -1,4 +1,5 @@
 import { extendTheme } from '@chakra-ui/react';
+import 'typeface-poppins';
 
 const theme = extendTheme({
   styles: {
