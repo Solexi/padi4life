@@ -1,6 +1,5 @@
 import { Box, Flex, Heading, Text, Image, Button, Grid, GridItem } from '@chakra-ui/react';
 import Navbar from '../../component/Navbar/index';
-import Download from '../../component/Download';
 import splash from '../../images/splash.png';
 import loan from '../../images/loan.png';
 import getloan from '../../images/getloan.png';
@@ -29,8 +28,8 @@ const Home: React.FC = () => {
             <Box
                 display={"flex"}
                 flexDir={["column", "column", "column", "row"]}
-                px={["", "", "", "200px"]}
-                justifyContent={["","", "center", "space-between"]}
+                px={["", "", "", "15vw"]}
+                justifyContent={["", "", "center", "space-between"]}
                 mb={["", "80px"]}
             >
                 <Box
@@ -76,21 +75,21 @@ const Home: React.FC = () => {
                 >
                     <Flex
                         bg={"#897BDC"}
-                        h={["170px","300px"]}
-                        w={["170px","300px"]}
+                        h={["170px", "300px", "250px", "300px"]}
+                        w={["170px", "300px", "250px", "300px"]}
                         borderRadius={"50%"}
                         justify={"center"}
                         pt={"50px"}
                     >
                         <Box
-                            h={["150px","305px"]}
+                            h={["150px", "305px"]}
                             display={"flex"}
                             flexDir={"row"}
                             transformOrigin={"center"}
                             justifyContent={"center"}
                         >
                             <Image
-                                transform={'rotate(-30deg)'}
+                                transform={'rotate(-20deg)'}
                                 src={social}
                                 w={["90px", "200px"]}
                                 h={["180px", "309px"]}
@@ -103,7 +102,7 @@ const Home: React.FC = () => {
                                 zIndex={2}
                             />
                             <Image
-                                transform={'rotate(30deg)'}
+                                transform={'rotate(20deg)'}
                                 src={wallet}
                                 w={["90px", "200px"]}
                                 h={["180px", "309px"]}
@@ -120,7 +119,7 @@ const Home: React.FC = () => {
                 justifyContent={"center"}
             >
                 <Grid
-                    templateColumns={['repeat(1, 3fr)', 'repeat(2, 3fr)', '' ,'repeat(5, 3fr)']}
+                    templateColumns={['repeat(1, 3fr)', 'repeat(2, 3fr)', 'repeat(2, 3fr)', 'repeat(5, 3fr)']}
                     alignSelf={"center"}
                     gap={["5vw", "5vw", "5vw", "2vw"]}
                 >
@@ -128,6 +127,7 @@ const Home: React.FC = () => {
                         <Box
                             bg={"#FFFFFF"}
                             w={"250px"}
+                            h={"260px"}
                             px={"10px"}
                             py={"10px"}
                             borderRadius={"md"}
@@ -141,7 +141,7 @@ const Home: React.FC = () => {
                                     fontSize={"18px"}
                                     fontWeight={500}
                                 >
-                                    Get a Loan
+                                    Asset Tokenization
                                 </Text>
                                 <Image
                                     src={loan}
@@ -154,9 +154,7 @@ const Home: React.FC = () => {
                                 fontWeight={300}
                                 mt={"10px"}
                             >
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                                Eius officiis illum, voluptatibus necessitatibus possimus placeat beatae
-                                ut vero delectus id asperiores ea nesciunt quam harum natus quaerat recusandae unde reiciendis!
+                                Padi4Life allows you to tokenize various assets, such as real estate, art, and collectibles. This means you can invest in these assets by purchasing digital tokens, thanks to blockchain technology. It makes investing in traditionally illiquid assets more accessible and secure.
                             </Text>
                         </Box>
                     </GridItem>
@@ -164,6 +162,7 @@ const Home: React.FC = () => {
                         <Box
                             bg={"#FFFFFF"}
                             w={"250px"}
+                            h={"260px"}
                             px={"10px"}
                             py={"10px"}
                             borderRadius={"md"}
@@ -177,7 +176,7 @@ const Home: React.FC = () => {
                                     fontSize={"18px"}
                                     fontWeight={500}
                                 >
-                                    Get a Loan
+                                    P2P lending
                                 </Text>
                                 <Image
                                     src={loan}
@@ -190,9 +189,7 @@ const Home: React.FC = () => {
                                 fontWeight={300}
                                 mt={"10px"}
                             >
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                                Eius officiis illum, voluptatibus necessitatibus possimus placeat beatae
-                                ut vero delectus id asperiores ea nesciunt quam harum natus quaerat recusandae unde reiciendis!
+                                Need a short-term loan? Padi4Life facilitates peer-to-peer lending, where you can request loans from other users within the Padi4Life community. You can also monitor your loan status and easily manage repayments.
                             </Text>
                         </Box>
                     </GridItem>
@@ -200,6 +197,7 @@ const Home: React.FC = () => {
                         <Box
                             bg={"#FFFFFF"}
                             w={"250px"}
+                            h={"260px"}
                             px={"10px"}
                             py={"10px"}
                             borderRadius={"md"}
@@ -213,7 +211,7 @@ const Home: React.FC = () => {
                                     fontSize={"18px"}
                                     fontWeight={500}
                                 >
-                                    Get a Loan
+                                    PadiCoin
                                 </Text>
                                 <Image
                                     src={loan}
@@ -226,9 +224,77 @@ const Home: React.FC = () => {
                                 fontWeight={300}
                                 mt={"10px"}
                             >
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                                Eius officiis illum, voluptatibus necessitatibus possimus placeat beatae
-                                ut vero delectus id asperiores ea nesciunt quam harum natus quaerat recusandae unde reiciendis!
+                                The Padi Coin feature in the Padi4Life app adds an exciting and innovative dimension to the platform by allowing users to not only earn and use Padi Coins within the app's social community but also as a means to invest in tangible assets like land properties and estates. 
+                            </Text>
+                        </Box>
+                    </GridItem>
+                    <GridItem>
+                        <Box
+                            bg={"#FFFFFF"}
+                            w={"250px"}
+                            h={"260px"}
+                            px={"10px"}
+                            py={"10px"}
+                            borderRadius={"md"}
+                        >
+                            <Flex
+                                flexDir={"row"}
+                                justifyContent={"space-between"}
+                                align={"center"}
+                            >
+                                <Text
+                                    fontSize={"18px"}
+                                    fontWeight={500}
+                                >
+                                    Community Engagement
+                                </Text>
+                                <Image
+                                    src={loan}
+                                    w={"40px"}
+                                    h={"40px"}
+                                />
+                            </Flex>
+                            <Text
+                                fontSize={"14px"}
+                                fontWeight={300}
+                                mt={"10px"}
+                            >
+                                Padi4Life offers a social feed where you can make posts, share financial insights, and engage with other users. What's unique is that you'll earn rewards in the form of Padi Coins based on the number of likes your posts receive.
+                            </Text>
+                        </Box>
+                    </GridItem>
+                    <GridItem>
+                        <Box
+                            bg={"#FFFFFF"}
+                            w={"250px"}
+                            h={"260px"}
+                            px={"10px"}
+                            py={"10px"}
+                            borderRadius={"md"}
+                        >
+                            <Flex
+                                flexDir={"row"}
+                                justifyContent={"space-between"}
+                                align={"center"}
+                            >
+                                <Text
+                                    fontSize={"18px"}
+                                    fontWeight={500}
+                                >
+                                    Upcoming Features
+                                </Text>
+                                <Image
+                                    src={loan}
+                                    w={"40px"}
+                                    h={"40px"}
+                                />
+                            </Flex>
+                            <Text
+                                fontSize={"14px"}
+                                fontWeight={300}
+                                mt={"10px"}
+                            >
+                                Padi4Life is continually evolving. In the near future, the app will introduce bill payment options for various utilities and services. You'll also be able to conveniently purchase mobile airtime, making everyday financial tasks more convenient.
                             </Text>
                         </Box>
                     </GridItem>
@@ -242,7 +308,7 @@ const Home: React.FC = () => {
                 mb={"80px"}
             >
                 <Flex
-                    w={["90vw","500px"]}
+                    w={["90vw", "500px"]}
                     flexDir={"column"}
                     mt={"40px"}
                 >
@@ -279,12 +345,12 @@ const Home: React.FC = () => {
                         mt={"20px"}
                         mb={["30px", ""]}
                     >
-                        Connect on Padi4Life, share resources, and earn rewards through 
+                        Connect on Padi4Life, share resources, and earn rewards through
                         social and financial interactions, making money management a social experience
                     </Text>
                 </Flex>
                 <Flex
-                    w={["95vw","500px"]}
+                    w={["95vw", "500px"]}
                     bgImage={connect}
                     borderRadius={"20px"}
                     justify={"center"}
@@ -322,8 +388,8 @@ const Home: React.FC = () => {
                         mt={"-40px"}
                         w={"400px"}
                         h={"400px"}
-                        // objectFit={"cover"}
-                        // borderRadius={"3xl"}
+                    // objectFit={"cover"}
+                    // borderRadius={"3xl"}
                     />
                 </Flex>
                 <Flex
@@ -356,14 +422,14 @@ const Home: React.FC = () => {
                         lineHeight={["60px", "70px", "70px", "90px"]}
                         color={"#412D95"}
                     >
-                       Get Quick And Safe Loan
+                        Get Quick And Safe Loan
                     </Heading>
                     <Text
                         fontSize={"18px"}
                         fontWeight={300}
                         mt={"20px"}
                     >
-                        Secure fast loans with ease on Padi4Life, for a convenient and 
+                        Secure fast loans with ease on Padi4Life, for a convenient and
                         safe borrowing experience and satisfy your financial needs.
                     </Text>
                 </Flex>
@@ -376,7 +442,7 @@ const Home: React.FC = () => {
                 mb={"80px"}
             >
                 <Flex
-                    w={["95vw","500px"]}
+                    w={["95vw", "500px"]}
                     flexDir={"column"}
                     mt={"40px"}
                 >
@@ -412,12 +478,12 @@ const Home: React.FC = () => {
                         fontWeight={300}
                         mt={"20px"}
                     >
-                        Effortlessly optimize your finances with Padi4Life with tools and insights 
+                        Effortlessly optimize your finances with Padi4Life with tools and insights
                         for flawless money management, making every dollar count
                     </Text>
                 </Flex>
                 <Flex
-                    w={["95vw","500px"]}
+                    w={["95vw", "500px"]}
                     bgImage={connect}
                     borderRadius={"20px"}
                     justify={"center"}
