@@ -139,7 +139,7 @@ const Footer: React.FC = () => {
                 <Flex
                     align={"center"}
                     flexDir={["column", "row"]}
-                    gap={"6px"}
+                    gap={["15px", "6px"]}
                 >
                     <Text color={"#FFFFFF"}>Follow us: </Text>
                     <Icon as={FaFacebook} color={"#FFFFFF"} w={"20px"} h={"20px"} />

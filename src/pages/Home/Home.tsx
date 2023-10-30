@@ -39,6 +39,7 @@ const Home: React.FC = () => {
                     w={["100vw", "100vw", "100vw", "500px"]}
                 >
                     <Heading
+                        fontFamily={"Poppins"}
                         fontSize={["50px", "36px", "60px", "48px", "50px", "58px"]}
                         fontWeight={700}
                         lineHeight={["70px", "70px", "90px"]}
@@ -48,7 +49,8 @@ const Home: React.FC = () => {
                         Your All in One Financial Hub
                     </Heading>
                     <Text
-                        fontSize={["14px", ""]}
+                        mx={"10px"}
+                        fontSize={["14px", "20px", "20px", ""]}
                         mt={["15px", ""]}
                     >
                         Padi4Life connects you with friends, local services, manage your money,
@@ -335,6 +337,7 @@ const Home: React.FC = () => {
                         </Text>
                     </Flex>
                     <Heading
+                        fontFamily={"Poppins"}
                         fontSize={["50px", "42px", "42px", "48px", "50px"]}
                         fontWeight={700}
                         lineHeight={["60px", "70px", "70px", "90px"]}
@@ -398,7 +401,7 @@ const Home: React.FC = () => {
                 <Flex
                     w={["90vw", "", "400px", "500px"]}
                     flexDir={"column"}
-                    mt={["", "", "20px", "40px"]}
+                    mt={["40px", "", "20px", "40px"]}
                 >
                     <Flex
                         mb={"20px"}
@@ -419,6 +422,7 @@ const Home: React.FC = () => {
                         </Text>
                     </Flex>
                     <Heading
+                        fontFamily={"Poppins"}
                         fontSize={["50px", "36px", "42px", "48px", "50px"]}
                         fontWeight={700}
                         lineHeight={["60px", "70px", "70px", "90px"]}
@@ -467,6 +471,7 @@ const Home: React.FC = () => {
                         </Text>
                     </Flex>
                     <Heading
+                        fontFamily={"Poppins"}
                         fontSize={["50px", "36px", "42px", "48px", "50px"]}
                         fontWeight={700}
                         lineHeight={["60px", "70px", "70px", "90px"]}
