@@ -62,7 +62,7 @@ const Meet: React.FC = () => {
                         <Grid
                             position={"absolute"}
                             top={["8%", "10%", "13%", "30%"]}
-                            templateColumns={['repeat(2, 3fr)', 'repeat(3, 3fr)', '', 'repeat(5, 3fr)']}
+                            templateColumns={['repeat(2, 3fr)', 'repeat(3, 3fr)', 'repeat(3, 3fr)', 'repeat(5, 3fr)']}
                             textAlign={"center"}
                             gap={["5vw", "5vw", "5vw", "2vw"]}
                         >
