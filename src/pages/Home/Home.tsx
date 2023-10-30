@@ -141,7 +141,7 @@ const Home: React.FC = () => {
                                     fontSize={"18px"}
                                     fontWeight={500}
                                 >
-                                    Get a Loan
+                                    Our Vision
                                 </Text>
                                 <Image
                                     src={loan}
@@ -154,9 +154,9 @@ const Home: React.FC = () => {
                                 fontWeight={300}
                                 mt={"10px"}
                             >
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                                Eius officiis illum, voluptatibus necessitatibus possimus placeat beatae
-                                ut vero delectus id asperiores ea nesciunt quam harum natus quaerat recusandae unde reiciendis!
+                                 At Padi4Life, we envision a world where financial opportunities know no bounds. Our vision is to be a 
+                                 leading force in the global financial revolution, connecting people, assets, and opportunities through blockchain technology. 
+                                 We strive to become the go-to platform for asset tokenization, peer lending, and community-driven financial success."
                             </Text>
                         </Box>
                     </GridItem>
@@ -177,7 +177,7 @@ const Home: React.FC = () => {
                                     fontSize={"18px"}
                                     fontWeight={500}
                                 >
-                                    Get a Loan
+                                    Our Mission
                                 </Text>
                                 <Image
                                     src={loan}
@@ -190,117 +190,9 @@ const Home: React.FC = () => {
                                 fontWeight={300}
                                 mt={"10px"}
                             >
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                                Eius officiis illum, voluptatibus necessitatibus possimus placeat beatae
-                                ut vero delectus id asperiores ea nesciunt quam harum natus quaerat recusandae unde reiciendis!
-                            </Text>
-                        </Box>
-                    </GridItem>
-                    <GridItem>
-                        <Box
-                            bg={"#FFFFFF"}
-                            w={"250px"}
-                            px={"10px"}
-                            py={"10px"}
-                            borderRadius={"md"}
-                        >
-                            <Flex
-                                flexDir={"row"}
-                                justifyContent={"space-between"}
-                                align={"center"}
-                            >
-                                <Text
-                                    fontSize={"18px"}
-                                    fontWeight={500}
-                                >
-                                    Get a Loan
-                                </Text>
-                                <Image
-                                    src={loan}
-                                    w={"40px"}
-                                    h={"40px"}
-                                />
-                            </Flex>
-                            <Text
-                                fontSize={"14px"}
-                                fontWeight={300}
-                                mt={"10px"}
-                            >
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                                Eius officiis illum, voluptatibus necessitatibus possimus placeat beatae
-                                ut vero delectus id asperiores ea nesciunt quam harum natus quaerat recusandae unde reiciendis!
-                            </Text>
-                        </Box>
-                    </GridItem>
-                    <GridItem>
-                        <Box
-                            bg={"#FFFFFF"}
-                            w={"250px"}
-                            px={"10px"}
-                            py={"10px"}
-                            borderRadius={"md"}
-                        >
-                            <Flex
-                                flexDir={"row"}
-                                justifyContent={"space-between"}
-                                align={"center"}
-                            >
-                                <Text
-                                    fontSize={"18px"}
-                                    fontWeight={500}
-                                >
-                                    Get a Loan
-                                </Text>
-                                <Image
-                                    src={loan}
-                                    w={"40px"}
-                                    h={"40px"}
-                                />
-                            </Flex>
-                            <Text
-                                fontSize={"14px"}
-                                fontWeight={300}
-                                mt={"10px"}
-                            >
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                                Eius officiis illum, voluptatibus necessitatibus possimus placeat beatae
-                                ut vero delectus id asperiores ea nesciunt quam harum natus quaerat recusandae unde reiciendis!
-                            </Text>
-                        </Box>
-                    </GridItem>
-                    <GridItem>
-                        <Box
-                            bg={"#FFFFFF"}
-                            w={"250px"}
-                            px={"10px"}
-                            py={"10px"}
-                            borderRadius={"md"}
-                        >
-                            <Flex
-                                flexDir={"row"}
-                                justifyContent={"space-between"}
-                                align={"center"}
-                            >
-                                <Text
-                                    fontSize={"18px"}
-                                    fontWeight={500}
-                                >
-                                    Get a Loan
-                                </Text>
-                                <Image
-                                    src={loan}
-                                    w={"40px"}
-                                    h={"40px"}
-                                />
-                            </Flex>
-                            <Text
-                                fontSize={"14px"}
-                                fontWeight={300}
-                                mt={"10px"}
-                            >
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                                Eius officiis illum, voluptatibus necessitatibus possimus placeat beatae
-                                ut vero delectus id asperiores ea nesciunt quam harum natus quaerat recusandae unde reiciendis!
+                                To empower individuals and communities through financial innovation and inclusivity, 
+                                our mission at Padi4Life is to provide a transformative mobile platform. 
+                                We aim to democratize finance by offering asset tokenization, peer-to-peer lending, and a thriving community that rewards engagement.
                             </Text>
                         </Box>
                     </GridItem>

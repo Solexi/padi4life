@@ -71,7 +71,7 @@ const Navbar: React.FC = () => {
             <Link href="https://bit.ly/padi4lifemobile" isExternal>
                 <Button
                     fontSize={["16px", ""]}
-                    px={["30px", ""]}
+                    px={["10px", ""]}
                     bg={"#412D95"}
                     _hover={{ bg: "#000000", transition: "0.5s" }}
                     color={"#FFFFFF"}

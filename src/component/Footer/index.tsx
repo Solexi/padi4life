@@ -139,13 +139,18 @@ const Footer: React.FC = () => {
                 <Flex
                     align={"center"}
                     flexDir={["column", "row"]}
-                    gap={["15px", "6px"]}
+                    gap={["15px", "15px"]}
                 >
                     <Text color={"#FFFFFF"}>Follow us: </Text>
-                    <Icon as={FaFacebook} color={"#FFFFFF"} w={"20px"} h={"20px"} />
-                    <Icon as={FaTwitter} color={"#FFFFFF"} w={"20px"} h={"20px"} />
-                    <Icon as={FaInstagram} color={"#FFFFFF"} w={"20px"} h={"20px"} />
-                    <Icon as={FaLinkedin} color={"#FFFFFF"} w={"20px"} h={"20px"} />
+                    <Flex
+                        flexDir={["row"]}
+                        gap={["15px", "10px"]}
+                    >
+                        <Icon as={FaFacebook} color={"#FFFFFF"} w={"20px"} h={"20px"} />
+                        <Icon as={FaTwitter} color={"#FFFFFF"} w={"20px"} h={"20px"} />
+                        <Icon as={FaInstagram} color={"#FFFFFF"} w={"20px"} h={"20px"} />
+                        <Icon as={FaLinkedin} color={"#FFFFFF"} w={"20px"} h={"20px"} />
+                    </Flex>
                 </Flex>
             </Flex>
         </Flex>
