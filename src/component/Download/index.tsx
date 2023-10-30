@@ -1,4 +1,4 @@
-import { Box, Flex, Heading, Icon, Text, Image } from "@chakra-ui/react"
+import { Box, Flex, Heading, Icon, Text, Image, Link } from "@chakra-ui/react"
 import { FaApple, FaGooglePlay } from "react-icons/fa"
 import download from "../../images/download.png"
 import features from "../../images/features.png"
@@ -8,9 +8,9 @@ const Download: React.FC = () => {
     return (
         <Flex
             display={"flex"}
-            flexDir={["column","row"]}
+            flexDir={["column", "row"]}
             w={"80%"}
-            h={["800px","400px"]}
+            h={["800px", "400px"]}
             mx={["10%"]}
             bgImage={download}
             zIndex={8}
@@ -50,63 +50,67 @@ const Download: React.FC = () => {
                     gap={"25px"}
                     mt={"30px"}
                 >
-                    <Flex
-                        as="button"
-                        display={"flex"}
-                        flexDir={"row"}
-                        px={["30px", "15px", "15px", "30px"]}
-                        w={["201px", "150px", "150px", "201px"]}
-                        h={"58px"}
-                        bg={"#FFFFFF"}
-                        align={"center"}
-                        borderRadius={"xl"}
-                    >
-                        <Icon
-                            as={FaApple}
-                            w={"30px"}
-                            h={"30px"}
-                            color={"#1E1446"}
-                        />
-                        <Text
-                            color={"#1E1446"}
-                            fontSize={["22.5px", "18px", "18px", "22.5px"]}
-                            fontWeight={500}
+                    <Link href="https://bit.ly/padi4life" isExternal>
+                        <Flex
+                            as="button"
+                            display={"flex"}
+                            flexDir={"row"}
+                            px={["30px", "15px", "15px", "30px"]}
+                            w={["201px", "150px", "150px", "201px"]}
+                            h={"58px"}
+                            bg={"#FFFFFF"}
+                            align={"center"}
+                            borderRadius={"xl"}
                         >
-                            App Store
-                        </Text>
-                    </Flex>
-                    <Flex
-                        as="button"
-                        display={"flex"}
-                        flexDir={"row"}
-                        px={["30px", "15px", "15px", "10px"]}
-                        w={["201px", "150px", "150px", "201px"]}
-                        h={"58px"}
-                        bg={"#FFFFFF"}
-                        justify={"center"}
-                        align={"center"}
-                        borderRadius={"xl"}
-                    >
-                        <Icon
-                            as={FaGooglePlay}
-                            w={"25px"}
-                            h={"25px"}
-                            color={"#1E1446"}
-                            mr={"3px"}
-                        />
-                        <Text
-                            color={"#1E1446"}
-                            fontSize={["22.5px", "17px", "17px", "22px"]}
-                            fontWeight={500}
+                            <Icon
+                                as={FaApple}
+                                w={"30px"}
+                                h={"30px"}
+                                color={"#1E1446"}
+                            />
+                            <Text
+                                color={"#1E1446"}
+                                fontSize={["22.5px", "18px", "18px", "22.5px"]}
+                                fontWeight={500}
+                            >
+                                App Store
+                            </Text>
+                        </Flex>
+                    </Link>
+                    <Link href="https://bit.ly/padi4life" isExternal>
+                        <Flex
+                            as="button"
+                            display={"flex"}
+                            flexDir={"row"}
+                            px={["30px", "15px", "15px", "10px"]}
+                            w={["201px", "150px", "150px", "201px"]}
+                            h={"58px"}
+                            bg={"#FFFFFF"}
+                            justify={"center"}
+                            align={"center"}
+                            borderRadius={"xl"}
                         >
-                            Google Play
-                        </Text>
-                    </Flex>
+                            <Icon
+                                as={FaGooglePlay}
+                                w={"25px"}
+                                h={"25px"}
+                                color={"#1E1446"}
+                                mr={"3px"}
+                            />
+                            <Text
+                                color={"#1E1446"}
+                                fontSize={["22.5px", "17px", "17px", "22px"]}
+                                fontWeight={500}
+                            >
+                                Google Play
+                            </Text>
+                        </Flex>
+                    </Link>
                 </Flex>
             </Box>
             <Flex
                 w={["320px", "400px"]}
-                mt={["40px", "200px", "200px",  "350px"]}
+                mt={["40px", "200px", "200px", "350px"]}
                 justifyContent={"center"}
             >
                 <Image
