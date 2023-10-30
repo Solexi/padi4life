@@ -4,8 +4,8 @@ import 'typeface-poppins';
 import { useState } from "react";
 
 const Navbar: React.FC = () => {
-    const apkDownloadUrl = "https://bit.ly/padi4life";
-    const [showMessage, setShowMessage] = useState(false);
+    // const apkDownloadUrl = "https://bit.ly/padi4life";
+    // const [showMessage, setShowMessage] = useState(false);
 
     // const handleClick = () => {
     //     setShowMessage(true);

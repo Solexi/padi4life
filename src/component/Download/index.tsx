@@ -50,7 +50,7 @@ const Download: React.FC = () => {
                     gap={"25px"}
                     mt={"30px"}
                 >
-                    <Link href="https://bit.ly/padi4life" isExternal>
+                    <Link href="https://bit.ly/padi4lifemobile" isExternal>
                         <Flex
                             as="button"
                             display={"flex"}
@@ -77,7 +77,7 @@ const Download: React.FC = () => {
                             </Text>
                         </Flex>
                     </Link>
-                    <Link href="https://bit.ly/padi4life" isExternal>
+                    <Link href="https://bit.ly/padi4lifemobile" isExternal>
                         <Flex
                             as="button"
                             display={"flex"}

@@ -1,4 +1,5 @@
 import { Box, Flex, Heading, Text, Image, Button, Grid, GridItem } from '@chakra-ui/react';
+import ScrollAnimation from 'react-animate-on-scroll';
 import Navbar from '../../component/Navbar/index';
 import splash from '../../images/splash.png';
 import loan from '../../images/loan.png';
@@ -118,187 +119,189 @@ const Home: React.FC = () => {
                 mb={"40px"}
                 justifyContent={"center"}
             >
-                <Grid
-                    templateColumns={['repeat(1, 3fr)', 'repeat(2, 3fr)', 'repeat(2, 3fr)', 'repeat(5, 3fr)']}
-                    alignSelf={"center"}
-                    gap={["5vw", "5vw", "5vw", "2vw"]}
-                >
-                    <GridItem>
-                        <Box
-                            bg={"#FFFFFF"}
-                            w={"250px"}
-                            h={"260px"}
-                            px={"10px"}
-                            py={"10px"}
-                            borderRadius={"md"}
-                        >
-                            <Flex
-                                flexDir={"row"}
-                                justifyContent={"space-between"}
-                                align={"center"}
+                <ScrollAnimation animateIn={'fadeIn'}>
+                    <Grid
+                        templateColumns={['repeat(1, 3fr)', 'repeat(2, 3fr)', 'repeat(2, 3fr)', 'repeat(5, 3fr)']}
+                        alignSelf={"center"}
+                        gap={["5vw", "5vw", "5vw", "2vw"]}
+                    >
+                        <GridItem>
+                            <Box
+                                bg={"#FFFFFF"}
+                                w={"250px"}
+                                h={"260px"}
+                                px={"10px"}
+                                py={"10px"}
+                                borderRadius={"md"}
                             >
-                                <Text
-                                    fontSize={"18px"}
-                                    fontWeight={500}
+                                <Flex
+                                    flexDir={"row"}
+                                    justifyContent={"space-between"}
+                                    align={"center"}
                                 >
-                                    Asset Tokenization
-                                </Text>
-                                <Image
-                                    src={loan}
-                                    w={"40px"}
-                                    h={"40px"}
-                                />
-                            </Flex>
-                            <Text
-                                fontSize={"14px"}
-                                fontWeight={300}
-                                mt={"10px"}
-                            >
-                                Padi4Life allows you to tokenize various assets, such as real estate, art, and collectibles. This means you can invest in these assets by purchasing digital tokens, thanks to blockchain technology. It makes investing in traditionally illiquid assets more accessible and secure.
-                            </Text>
-                        </Box>
-                    </GridItem>
-                    <GridItem>
-                        <Box
-                            bg={"#FFFFFF"}
-                            w={"250px"}
-                            h={"260px"}
-                            px={"10px"}
-                            py={"10px"}
-                            borderRadius={"md"}
-                        >
-                            <Flex
-                                flexDir={"row"}
-                                justifyContent={"space-between"}
-                                align={"center"}
-                            >
+                                    <Text
+                                        fontSize={"18px"}
+                                        fontWeight={500}
+                                    >
+                                        Asset Tokenization
+                                    </Text>
+                                    <Image
+                                        src={loan}
+                                        w={"40px"}
+                                        h={"40px"}
+                                    />
+                                </Flex>
                                 <Text
-                                    fontSize={"18px"}
-                                    fontWeight={500}
+                                    fontSize={"14px"}
+                                    fontWeight={300}
+                                    mt={"10px"}
                                 >
-                                    P2P lending
+                                    Padi4Life allows you to tokenize various assets, such as real estate, art, and collectibles. This means you can invest in these assets by purchasing digital tokens, thanks to blockchain technology. It makes investing in traditionally illiquid assets more accessible and secure.
                                 </Text>
-                                <Image
-                                    src={loan}
-                                    w={"40px"}
-                                    h={"40px"}
-                                />
-                            </Flex>
-                            <Text
-                                fontSize={"14px"}
-                                fontWeight={300}
-                                mt={"10px"}
+                            </Box>
+                        </GridItem>
+                        <GridItem>
+                            <Box
+                                bg={"#FFFFFF"}
+                                w={"250px"}
+                                h={"260px"}
+                                px={"10px"}
+                                py={"10px"}
+                                borderRadius={"md"}
                             >
-                                Need a short-term loan? Padi4Life facilitates peer-to-peer lending, where you can request loans from other users within the Padi4Life community. You can also monitor your loan status and easily manage repayments.
-                            </Text>
-                        </Box>
-                    </GridItem>
-                    <GridItem>
-                        <Box
-                            bg={"#FFFFFF"}
-                            w={"250px"}
-                            h={"260px"}
-                            px={"10px"}
-                            py={"10px"}
-                            borderRadius={"md"}
-                        >
-                            <Flex
-                                flexDir={"row"}
-                                justifyContent={"space-between"}
-                                align={"center"}
-                            >
+                                <Flex
+                                    flexDir={"row"}
+                                    justifyContent={"space-between"}
+                                    align={"center"}
+                                >
+                                    <Text
+                                        fontSize={"18px"}
+                                        fontWeight={500}
+                                    >
+                                        P2P lending
+                                    </Text>
+                                    <Image
+                                        src={loan}
+                                        w={"40px"}
+                                        h={"40px"}
+                                    />
+                                </Flex>
                                 <Text
-                                    fontSize={"18px"}
-                                    fontWeight={500}
+                                    fontSize={"14px"}
+                                    fontWeight={300}
+                                    mt={"10px"}
                                 >
-                                    PadiCoin
+                                    Need a short-term loan? Padi4Life facilitates peer-to-peer lending, where you can request loans from other users within the Padi4Life community. You can also monitor your loan status and easily manage repayments.
                                 </Text>
-                                <Image
-                                    src={loan}
-                                    w={"40px"}
-                                    h={"40px"}
-                                />
-                            </Flex>
-                            <Text
-                                fontSize={"14px"}
-                                fontWeight={300}
-                                mt={"10px"}
+                            </Box>
+                        </GridItem>
+                        <GridItem>
+                            <Box
+                                bg={"#FFFFFF"}
+                                w={"250px"}
+                                h={"260px"}
+                                px={"10px"}
+                                py={"10px"}
+                                borderRadius={"md"}
                             >
-                                The Padi Coin feature in the Padi4Life app adds an exciting and innovative dimension to the platform by allowing users to not only earn and use Padi Coins within the app's social community but also as a means to invest in tangible assets like land properties and estates. 
-                            </Text>
-                        </Box>
-                    </GridItem>
-                    <GridItem>
-                        <Box
-                            bg={"#FFFFFF"}
-                            w={"250px"}
-                            h={"260px"}
-                            px={"10px"}
-                            py={"10px"}
-                            borderRadius={"md"}
-                        >
-                            <Flex
-                                flexDir={"row"}
-                                justifyContent={"space-between"}
-                                align={"center"}
-                            >
+                                <Flex
+                                    flexDir={"row"}
+                                    justifyContent={"space-between"}
+                                    align={"center"}
+                                >
+                                    <Text
+                                        fontSize={"18px"}
+                                        fontWeight={500}
+                                    >
+                                        PadiCoin
+                                    </Text>
+                                    <Image
+                                        src={loan}
+                                        w={"40px"}
+                                        h={"40px"}
+                                    />
+                                </Flex>
                                 <Text
-                                    fontSize={"18px"}
-                                    fontWeight={500}
+                                    fontSize={"14px"}
+                                    fontWeight={300}
+                                    mt={"10px"}
                                 >
-                                    Community Engagement
+                                    The Padi Coin feature in the Padi4Life app adds an exciting and innovative dimension to the platform by allowing users to not only earn and use Padi Coins within the app's social community but also as a means to invest in tangible assets like land properties and estates.
                                 </Text>
-                                <Image
-                                    src={loan}
-                                    w={"40px"}
-                                    h={"40px"}
-                                />
-                            </Flex>
-                            <Text
-                                fontSize={"14px"}
-                                fontWeight={300}
-                                mt={"10px"}
+                            </Box>
+                        </GridItem>
+                        <GridItem>
+                            <Box
+                                bg={"#FFFFFF"}
+                                w={"250px"}
+                                h={"260px"}
+                                px={"10px"}
+                                py={"10px"}
+                                borderRadius={"md"}
                             >
-                                Padi4Life offers a social feed where you can make posts, share financial insights, and engage with other users. What's unique is that you'll earn rewards in the form of Padi Coins based on the number of likes your posts receive.
-                            </Text>
-                        </Box>
-                    </GridItem>
-                    <GridItem>
-                        <Box
-                            bg={"#FFFFFF"}
-                            w={"250px"}
-                            h={"260px"}
-                            px={"10px"}
-                            py={"10px"}
-                            borderRadius={"md"}
-                        >
-                            <Flex
-                                flexDir={"row"}
-                                justifyContent={"space-between"}
-                                align={"center"}
-                            >
+                                <Flex
+                                    flexDir={"row"}
+                                    justifyContent={"space-between"}
+                                    align={"center"}
+                                >
+                                    <Text
+                                        fontSize={"18px"}
+                                        fontWeight={500}
+                                    >
+                                        Community Engagement
+                                    </Text>
+                                    <Image
+                                        src={loan}
+                                        w={"40px"}
+                                        h={"40px"}
+                                    />
+                                </Flex>
                                 <Text
-                                    fontSize={"18px"}
-                                    fontWeight={500}
+                                    fontSize={"14px"}
+                                    fontWeight={300}
+                                    mt={"10px"}
                                 >
-                                    Upcoming Features
+                                    Padi4Life offers a social feed where you can make posts, share financial insights, and engage with other users. What's unique is that you'll earn rewards in the form of Padi Coins based on the number of likes your posts receive.
                                 </Text>
-                                <Image
-                                    src={loan}
-                                    w={"40px"}
-                                    h={"40px"}
-                                />
-                            </Flex>
-                            <Text
-                                fontSize={"14px"}
-                                fontWeight={300}
-                                mt={"10px"}
+                            </Box>
+                        </GridItem>
+                        <GridItem>
+                            <Box
+                                bg={"#FFFFFF"}
+                                w={"250px"}
+                                h={"260px"}
+                                px={"10px"}
+                                py={"10px"}
+                                borderRadius={"md"}
                             >
-                                Padi4Life is continually evolving. In the near future, the app will introduce bill payment options for various utilities and services. You'll also be able to conveniently purchase mobile airtime, making everyday financial tasks more convenient.
-                            </Text>
-                        </Box>
-                    </GridItem>
-                </Grid>
+                                <Flex
+                                    flexDir={"row"}
+                                    justifyContent={"space-between"}
+                                    align={"center"}
+                                >
+                                    <Text
+                                        fontSize={"18px"}
+                                        fontWeight={500}
+                                    >
+                                        Upcoming Features
+                                    </Text>
+                                    <Image
+                                        src={loan}
+                                        w={"40px"}
+                                        h={"40px"}
+                                    />
+                                </Flex>
+                                <Text
+                                    fontSize={"14px"}
+                                    fontWeight={300}
+                                    mt={"10px"}
+                                >
+                                    Padi4Life is continually evolving. In the near future, the app will introduce bill payment options for various utilities and services. You'll also be able to conveniently purchase mobile airtime, making everyday financial tasks more convenient.
+                                </Text>
+                            </Box>
+                        </GridItem>
+                    </Grid>
+                </ScrollAnimation>
             </Flex>
             <Flex
                 mt={["40px", "60px"]}
@@ -357,14 +360,16 @@ const Home: React.FC = () => {
                     h={"400px"}
                     overflow={"clip"}
                 >
-                    <Image
-                        src={rocket}
-                        mt={"70px"}
-                        w={"400px"}
-                        h={"714px"}
-                        objectFit={"cover"}
-                        borderRadius={"3xl"}
-                    />
+                    <ScrollAnimation animateIn='bounceInRight' animateOnce>
+                        <Image
+                            src={rocket}
+                            mt={"70px"}
+                            w={"400px"}
+                            h={"714px"}
+                            objectFit={"cover"}
+                            borderRadius={"3xl"}
+                        />
+                    </ScrollAnimation>
                 </Flex>
             </Flex>
             <Flex
@@ -383,14 +388,16 @@ const Home: React.FC = () => {
                     borderRadius={"50%"}
                     pl={"101px"}
                 >
-                    <Image
-                        src={getloan}
-                        mt={"-40px"}
-                        w={"400px"}
-                        h={"400px"}
-                    // objectFit={"cover"}
-                    // borderRadius={"3xl"}
-                    />
+                    <ScrollAnimation animateIn='bounceInLeft' animateOnce>
+                        <Image
+                            src={getloan}
+                            mt={"-40px"}
+                            w={"400px"}
+                            h={"400px"}
+                        // objectFit={"cover"}
+                        // borderRadius={"3xl"}
+                        />
+                    </ScrollAnimation>
                 </Flex>
                 <Flex
                     w={["90vw", "", "400px", "500px"]}
@@ -490,6 +497,7 @@ const Home: React.FC = () => {
                     h={"400px"}
                     overflow={"clip"}
                 >
+                    <ScrollAnimation animateIn='bounceInRight' animateOnce>
                     <Image
                         src={manage}
                         mt={"50px"}
@@ -498,6 +506,7 @@ const Home: React.FC = () => {
                         objectFit={"cover"}
                         borderRadius={"3xl"}
                     />
+                    </ScrollAnimation>
                 </Flex>
             </Flex>
             <Box
