@@ -1,6 +1,7 @@
 import { Box, Flex, Heading, Text, Grid, GridItem, Image, Icon, Link } from "@chakra-ui/react";
 import Navbar from "../../component/Navbar";
 import ayanfe from "../../images/ayanfe.jpg";
+import sophia from "../../images/profile_off.jpg";
 import "typeface-poppins";
 import { FaDribbble, FaGithub, FaLinkedin } from "react-icons/fa";
 import Footer from "../../component/Footer";
@@ -169,7 +170,7 @@ const Meet: React.FC = () => {
                                         h={["150px", "210px"]}
                                         objectFit={"fill"}
                                         borderRadius={"50%"}
-                                        src={"https://avatars.githubusercontent.com/u/82169299?v=4"}
+                                        src={sophia}
                                         mb={"15px"}
                                     />
                                 </Flex>
