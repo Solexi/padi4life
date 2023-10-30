@@ -1,5 +1,5 @@
 import { Box, Flex, Heading, Text, Image, Button, Grid, GridItem } from '@chakra-ui/react';
-import ScrollAnimation from 'react-animate-on-scroll';
+// import ScrollAnimation from 'react-animate-on-scroll';
 import Navbar from '../../component/Navbar/index';
 import splash from '../../images/splash.png';
 import loan from '../../images/loan.png';
@@ -119,7 +119,7 @@ const Home: React.FC = () => {
                 mb={"40px"}
                 justifyContent={"center"}
             >
-                <ScrollAnimation animateIn={'fadeIn'}>
+                {/* <ScrollAnimation animateIn={'fadeIn'}> */}
                     <Grid
                         templateColumns={['repeat(1, 3fr)', 'repeat(2, 3fr)', 'repeat(2, 3fr)', 'repeat(5, 3fr)']}
                         alignSelf={"center"}
@@ -301,7 +301,7 @@ const Home: React.FC = () => {
                             </Box>
                         </GridItem>
                     </Grid>
-                </ScrollAnimation>
+                {/* </ScrollAnimation> */}
             </Flex>
             <Flex
                 mt={["40px", "60px"]}
@@ -360,7 +360,7 @@ const Home: React.FC = () => {
                     h={"400px"}
                     overflow={"clip"}
                 >
-                    <ScrollAnimation animateIn='bounceInRight' animateOnce>
+                    {/* <ScrollAnimation animateIn='bounceInRight' animateOnce> */}
                         <Image
                             src={rocket}
                             mt={"70px"}
@@ -369,7 +369,7 @@ const Home: React.FC = () => {
                             objectFit={"cover"}
                             borderRadius={"3xl"}
                         />
-                    </ScrollAnimation>
+                    {/* </ScrollAnimation> */}
                 </Flex>
             </Flex>
             <Flex
@@ -388,7 +388,7 @@ const Home: React.FC = () => {
                     borderRadius={"50%"}
                     pl={"101px"}
                 >
-                    <ScrollAnimation animateIn='bounceInLeft' animateOnce>
+                    {/* <ScrollAnimation animateIn='bounceInLeft' animateOnce> */}
                         <Image
                             src={getloan}
                             mt={"-40px"}
@@ -397,7 +397,7 @@ const Home: React.FC = () => {
                         // objectFit={"cover"}
                         // borderRadius={"3xl"}
                         />
-                    </ScrollAnimation>
+                    {/* </ScrollAnimation> */}
                 </Flex>
                 <Flex
                     w={["90vw", "", "400px", "500px"]}
@@ -497,7 +497,7 @@ const Home: React.FC = () => {
                     h={"400px"}
                     overflow={"clip"}
                 >
-                    <ScrollAnimation animateIn='bounceInRight' animateOnce>
+                    {/* <ScrollAnimation animateIn='bounceInRight' animateOnce> */}
                     <Image
                         src={manage}
                         mt={"50px"}
@@ -506,7 +506,7 @@ const Home: React.FC = () => {
                         objectFit={"cover"}
                         borderRadius={"3xl"}
                     />
-                    </ScrollAnimation>
+                    {/* </ScrollAnimation> */}
                 </Flex>
             </Flex>
             <Box
