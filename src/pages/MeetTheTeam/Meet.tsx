@@ -23,7 +23,7 @@ const Meet: React.FC = () => {
                 flexDir={"column"}
             >
                 <Heading
-                    fontSize={"28px"}
+                    fontSize={["22px","28px"]}
                     color={"#412D95"}
                     fontFamily={"Poppins"}
                     my={"20px"}
@@ -31,6 +31,7 @@ const Meet: React.FC = () => {
                     Hi-Tech Innovation Team
                 </Heading>
                 <Text
+                    fontSize={["16px",""]}
                     mb={"10px"}
                 >
                     Meet the brains behind
@@ -45,7 +46,7 @@ const Meet: React.FC = () => {
                         overflow="hidden"
                         color="white"
                         w={"100vw"}
-                        h={"600px"}
+                        h={["900px","900px", "900px", "600px"]}
                         justify={"center"}
                     >
                         <Box
@@ -60,8 +61,8 @@ const Meet: React.FC = () => {
                         />
                         <Grid
                             position={"absolute"}
-                            top={"30%"}
-                            templateColumns={['repeat(1, 3fr)', 'repeat(2, 3fr)', '', 'repeat(5, 3fr)']}
+                            top={["8%", "10%", "13%", "30%"]}
+                            templateColumns={['repeat(2, 3fr)', 'repeat(3, 3fr)', '', 'repeat(5, 3fr)']}
                             textAlign={"center"}
                             gap={["5vw", "5vw", "5vw", "2vw"]}
                         >
@@ -69,10 +70,11 @@ const Meet: React.FC = () => {
                                 <Flex
                                     flexDir={"column"}
                                     justify={"center"}
+                                    align={"center"}
                                 >
                                     <Image
-                                        w={"210px"}
-                                        h={"210px"}
+                                        w={["150px", "210px"]}
+                                        h={["150px", "210px"]}
                                         objectFit={"fill"}
                                         borderRadius={"50%"}
                                         src={ayanfe}
@@ -81,31 +83,31 @@ const Meet: React.FC = () => {
                                 </Flex>
                                 <Text
                                     fontWeight={600}
-                                    fontSize={"18px"}
+                                    fontSize={["16px", "18px"]}
                                     mb={"3px"}
                                 >
                                     Ayanfe Afolabi
                                 </Text>
                                 <Text
                                     fontWeight={400}
-                                    fontSize={"14px"}
+                                    fontSize={["13px", "14px"]}
                                     mb={"8px"}
                                 >
-                                    Mobile Developer/Team Lead
+                                    Mobile Developer
                                 </Text>
                                 <Flex justify="center" gap={"12px"}>
                                     <Link href={"https://www.linkedin.com/in/afolabi-ayanfe-6813a0212"}>
                                         <Icon
                                             as={FaLinkedin}
-                                            w={"25px"}
-                                            h={"25px"}
+                                            w={["23px", "25px"]}
+                                            h={["23px", "25px"]}
                                         />
                                     </Link>
                                     <Link href={"http://github.com/ayanfesolution"}>
                                         <Icon
                                             as={FaGithub}
-                                            w={"25px"}
-                                            h={"25px"}
+                                            w={["23px", "25px"]}
+                                            h={["23px", "25px"]}
                                         />
                                     </Link>
                                 </Flex>
@@ -114,10 +116,11 @@ const Meet: React.FC = () => {
                                 <Flex
                                     flexDir={"column"}
                                     justify={"center"}
+                                    align={"center"}
                                 >
                                     <Image
-                                        w={"210px"}
-                                        h={"210px"}
+                                        w={["150px", "210px"]}
+                                        h={["150px", "210px"]}
                                         objectFit={"fill"}
                                         borderRadius={"50%"}
                                         src={"https://media.licdn.com/dms/image/D4D35AQEuWJrG3ld0Cg/profile-framedphoto-shrink_800_800/0/1664735876048?e=1699239600&v=beta&t=fdJqgW-eOFufEbWfYjiAs1oPQ6W6Ih9rcEk_iv81RYM"}
@@ -126,14 +129,14 @@ const Meet: React.FC = () => {
                                 </Flex>
                                 <Text
                                     fontWeight={600}
-                                    fontSize={"18px"}
+                                    fontSize={["16px", "18px"]}
                                     mb={"3px"}
                                 >
                                     Ibrahim Ismail
                                 </Text>
                                 <Text
                                     fontWeight={400}
-                                    fontSize={"14px"}
+                                    fontSize={["13px", "14px"]}
                                     mb={"8px"}
                                 >
                                     Backend Developer
@@ -142,15 +145,15 @@ const Meet: React.FC = () => {
                                     <Link href={"https://www.linkedin.com/in/ismail-ibrahim-3a79b723a"}>
                                         <Icon
                                             as={FaLinkedin}
-                                            w={"25px"}
-                                            h={"25px"}
+                                            w={["23px", "25px"]}
+                                            h={["23px", "25px"]}
                                         />
                                     </Link>
                                     <Link href={"https://github.com/busayo-I/"}>
                                         <Icon
                                             as={FaGithub}
-                                            w={"25px"}
-                                            h={"25px"}
+                                            w={["23px", "25px"]}
+                                            h={["23px", "25px"]}
                                         />
                                     </Link>
                                 </Flex>
@@ -159,10 +162,11 @@ const Meet: React.FC = () => {
                                 <Flex
                                     flexDir={"column"}
                                     justify={"center"}
+                                    align={"center"}
                                 >
                                     <Image
-                                        w={"210px"}
-                                        h={"210px"}
+                                        w={["150px", "210px"]}
+                                        h={["150px", "210px"]}
                                         objectFit={"fill"}
                                         borderRadius={"50%"}
                                         src={"https://avatars.githubusercontent.com/u/82169299?v=4"}
@@ -171,14 +175,14 @@ const Meet: React.FC = () => {
                                 </Flex>
                                 <Text
                                     fontWeight={600}
-                                    fontSize={"18px"}
+                                    fontSize={["16px", "18px"]}
                                     mb={"3px"}
                                 >
                                     Sophia Ezeh
                                 </Text>
                                 <Text
                                     fontWeight={400}
-                                    fontSize={"14px"}
+                                    fontSize={["13px", "14px"]}
                                     mb={"8px"}
                                 >
                                     Frontend Developer
@@ -187,15 +191,15 @@ const Meet: React.FC = () => {
                                     <Link href={"https://www.linkedin.com/in/sophia-ezeh-9884b6215/"}>
                                         <Icon
                                             as={FaLinkedin}
-                                            w={"25px"}
-                                            h={"25px"}
+                                            w={["23px", "25px"]}
+                                            h={["23px", "25px"]}
                                         />
                                     </Link>
                                     <Link href={"http://github.com/Solexi"}>
                                         <Icon
                                             as={FaGithub}
-                                            w={"25px"}
-                                            h={"25px"}
+                                            w={["23px", "25px"]}
+                                            h={["23px", "25px"]}
                                         />
                                     </Link>
                                 </Flex>
@@ -204,10 +208,11 @@ const Meet: React.FC = () => {
                                 <Flex
                                     flexDir={"column"}
                                     justify={"center"}
+                                    align={"center"}
                                 >
                                     <Image
-                                        w={"210px"}
-                                        h={"210px"}
+                                        w={["150px", "210px"]}
+                                        h={["150px", "210px"]}
                                         objectFit={"fill"}
                                         borderRadius={"50%"}
                                         src={"https://media.licdn.com/dms/image/D4D03AQGyyP4U92XctA/profile-displayphoto-shrink_800_800/0/1680630358421?e=1704326400&v=beta&t=7bNevf07_DP3tfZAwMK5BZnw-8i_l06m3Sh0uj2cw4I"}
@@ -216,14 +221,14 @@ const Meet: React.FC = () => {
                                 </Flex>
                                 <Text
                                     fontWeight={600}
-                                    fontSize={"18px"}
+                                    fontSize={["16px", "18px"]}
                                     mb={"3px"}
                                 >
                                     Peace Obienyi
                                 </Text>
                                 <Text
                                     fontWeight={400}
-                                    fontSize={"14px"}
+                                    fontSize={["13px", "14px"]}
                                     mb={"8px"}
                                 >
                                     UI/UX Designer
@@ -232,15 +237,15 @@ const Meet: React.FC = () => {
                                     <Link href={"https://www.linkedin.com/in/peace-obienyi-6a9791194/"}>
                                         <Icon
                                             as={FaLinkedin}
-                                            w={"25px"}
-                                            h={"25px"}
+                                            w={["23px", "25px"]}
+                                            h={["23px", "25px"]}
                                         />
                                     </Link>
                                     <Link href={"https://dribbble.com/Confettidesigns"}>
                                         <Icon
                                             as={FaDribbble}
-                                            w={"25px"}
-                                            h={"25px"}
+                                            w={["23px", "25px"]}
+                                            h={["23px", "25px"]}
                                         />
                                     </Link>
                                 </Flex>
@@ -249,10 +254,11 @@ const Meet: React.FC = () => {
                                 <Flex
                                     flexDir={"column"}
                                     justify={"center"}
+                                    align={"center"}
                                 >
                                     <Image
-                                        w={"210px"}
-                                        h={"210px"}
+                                        w={["150px", "210px"]}
+                                        h={["150px", "210px"]}
                                         objectFit={"fill"}
                                         borderRadius={"50%"}
                                         src={"https://pbs.twimg.com/profile_images/1503877967948263430/dYTulFIR_400x400.jpg"}
@@ -261,14 +267,14 @@ const Meet: React.FC = () => {
                                 </Flex>
                                 <Text
                                     fontWeight={600}
-                                    fontSize={"18px"}
+                                    fontSize={["16px", "18px"]}
                                     mb={"3px"}
                                 >
                                     Maryjane Adebayo
                                 </Text>
                                 <Text
                                     fontWeight={400}
-                                    fontSize={"14px"}
+                                    fontSize={["13px", "14px"]}
                                     mb={"8px"}
                                 >
                                     Product Manager
@@ -277,8 +283,8 @@ const Meet: React.FC = () => {
                                     <Link href={"https://www.linkedin.com/in/maryjaneadebayo/"}>
                                         <Icon
                                             as={FaLinkedin}
-                                            w={"25px"}
-                                            h={"25px"}
+                                            w={["23px", "25px"]}
+                                            h={["23px", "25px"]}
                                         />
                                     </Link>
                                     {/* <Link href={"http://github.com/ayanfesolution"}>
