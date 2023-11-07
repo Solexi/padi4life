@@ -1,5 +1,7 @@
 import { Box, Flex, Heading, Text, Image, Button, Grid, GridItem } from '@chakra-ui/react';
 // import ScrollAnimation from 'react-animate-on-scroll';
+import { useEffect, useRef } from 'react';
+import { motion, useAnimation } from 'framer-motion';
 import Navbar from '../../component/Navbar/index';
 import splash from '../../images/splash.png';
 import loan from '../../images/loan.png';
@@ -9,11 +11,117 @@ import rocket from '../../images/mockrocket.png';
 import manage from '../../images/manage.png';
 import social from '../../images/social.png';
 import wallet from '../../images/wallet.png';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import React from 'react';
 import "typeface-poppins";
 import Footer from '../../component/Footer';
 
 const Home: React.FC = () => {
+    const gridRef = useRef<HTMLDivElement | null>(null);
+    const containerRef = useRef<HTMLDivElement | null>(null);
+    const imageRef = useRef<HTMLDivElement | null>(null);
+    const controls = useAnimation();
+
+    const animationVariants = {
+        hidden: {
+            opacity: 0,
+            y: 100, // Move the element down by 50px
+        },
+        visible: {
+            opacity: 1,
+            y: 0, // Move the element back to its original position
+            transition: {
+                duration: 0.7, // Adjust the animation duration as needed
+                ease: 'easeIn'
+            },
+        },
+    };
+
+    const slideInVariants = {
+        hidden: {
+            x: -500, // Start off-screen to the left
+            opacity: 0,
+            scale: 0
+        },
+        visible: {
+            x: 0, // Slide to its original position
+            opacity: 1,
+            scale: 1,
+            transition: {
+                duration: 1, // Adjust the animation duration as needed
+                ease: 'easeOut', // Use a suitable easing function
+            },
+        },
+    };
+
+    const slideInImageVariants = {
+        hidden: {
+            x: 1000, // Start off-screen to the right
+            opacity: 0,
+            scale: 0
+        },
+        visible: {
+            x: 0, // Slide to its original position
+            opacity: 1,
+            scale: 1,
+            transition: {
+                duration: 1, // Adjust the animation duration as needed
+                ease: 'easeOut', // Use a suitable easing function
+            },
+        },
+    };
+
+    useEffect(() => {
+        const checkViewport = async () => {
+            if (gridRef.current) {
+                const element = gridRef.current;
+                const elementTop = element.getBoundingClientRect().top;
+                const elementBottom = element.getBoundingClientRect().bottom;
+                const windowHeight = window.innerHeight;
+
+                if (elementTop < windowHeight && elementBottom > 0) {
+                    // If the element is in the viewport, trigger the animation
+                    await controls.start('visible');
+                }
+            }
+            if (containerRef.current) {
+                const element = containerRef.current;
+                const elementTop = element.getBoundingClientRect().top;
+                const elementBottom = element.getBoundingClientRect().bottom;
+                const windowHeight = window.innerHeight;
+
+                if (elementTop < windowHeight && elementBottom > 0) {
+                    // If the element is in the viewport, trigger the animation
+                    await controls.start('visible');
+                }
+            }
+            if (imageRef.current) {
+                const element = imageRef.current;
+                const elementTop = element.getBoundingClientRect().top;
+                const elementBottom = element.getBoundingClientRect().bottom;
+                const windowHeight = window.innerHeight;
+
+                if (elementTop < windowHeight && elementBottom > 0) {
+                    // If the element is in the viewport, trigger the animation
+                    await controls.start('visible');
+                }
+            }
+        };
+
+        // Initially, check the viewport to see if the element is already in view
+        checkViewport();
+
+        // Add a scroll event listener to check when the user scrolls
+        window.addEventListener('scroll', checkViewport);
+
+        return () => {
+            // Remove the scroll event listener when the component unmounts
+            window.removeEventListener('scroll', checkViewport);
+        };
+    }, [controls]);
+
+
     return (
         <Flex
             flexDir={"column"}
@@ -120,6 +228,12 @@ const Home: React.FC = () => {
                 justifyContent={"center"}
             >
                 {/* <ScrollAnimation animateIn={'fadeIn'}> */}
+                <motion.div
+                    ref={gridRef}
+                    initial="hidden"
+                    animate={controls}
+                    variants={animationVariants}
+                >
                     <Grid
                         templateColumns={['repeat(1, 3fr)', 'repeat(2, 3fr)', 'repeat(2, 3fr)', 'repeat(5, 3fr)']}
                         alignSelf={"center"}
@@ -301,6 +415,7 @@ const Home: React.FC = () => {
                             </Box>
                         </GridItem>
                     </Grid>
+                </motion.div>
                 {/* </ScrollAnimation> */}
             </Flex>
             <Flex
@@ -310,48 +425,55 @@ const Home: React.FC = () => {
                 justifyContent={"space-between"}
                 mb={"80px"}
             >
-                <Flex
-                    w={["90vw", "500px"]}
-                    flexDir={"column"}
-                    mt={"40px"}
+                <motion.div
+                    ref={containerRef}
+                    initial="hidden"
+                    animate={controls}
+                    variants={slideInVariants}
                 >
                     <Flex
-                        mb={"20px"}
-                        flexDir={"row"}
-                        align={"center"}
+                        w={["90vw", "500px"]}
+                        flexDir={"column"}
+                        mt={"40px"}
                     >
-                        <Box
-                            w={"50px"}
-                            bg={"#808080"}
-                            h={"2px"}
-                            borderRadius={"5px"}
-                            mr={"12px"}
-                        />
-                        <Text
-                            color={"#010101"}
+                        <Flex
+                            mb={"20px"}
+                            flexDir={"row"}
+                            align={"center"}
                         >
-                            01
+                            <Box
+                                w={"50px"}
+                                bg={"#808080"}
+                                h={"2px"}
+                                borderRadius={"5px"}
+                                mr={"12px"}
+                            />
+                            <Text
+                                color={"#010101"}
+                            >
+                                01
+                            </Text>
+                        </Flex>
+                        <Heading
+                            fontFamily={"Poppins"}
+                            fontSize={["50px", "42px", "42px", "48px", "50px"]}
+                            fontWeight={700}
+                            lineHeight={["60px", "70px", "70px", "90px"]}
+                            color={"#412D95"}
+                        >
+                            Connect With Others And Earn
+                        </Heading>
+                        <Text
+                            fontSize={"18px"}
+                            fontWeight={300}
+                            mt={"20px"}
+                            mb={["30px", ""]}
+                        >
+                            Connect on Padi4Life, share resources, and earn rewards through
+                            social and financial interactions, making money management a social experience
                         </Text>
                     </Flex>
-                    <Heading
-                        fontFamily={"Poppins"}
-                        fontSize={["50px", "42px", "42px", "48px", "50px"]}
-                        fontWeight={700}
-                        lineHeight={["60px", "70px", "70px", "90px"]}
-                        color={"#412D95"}
-                    >
-                        Connect With Others And Earn
-                    </Heading>
-                    <Text
-                        fontSize={"18px"}
-                        fontWeight={300}
-                        mt={"20px"}
-                        mb={["30px", ""]}
-                    >
-                        Connect on Padi4Life, share resources, and earn rewards through
-                        social and financial interactions, making money management a social experience
-                    </Text>
-                </Flex>
+                </motion.div>
                 <Flex
                     w={["95vw", "500px"]}
                     bgImage={connect}
@@ -361,6 +483,12 @@ const Home: React.FC = () => {
                     overflow={"clip"}
                 >
                     {/* <ScrollAnimation animateIn='bounceInRight' animateOnce> */}
+                    <motion.div
+                        ref={imageRef}
+                        initial="hidden"
+                        animate={controls}
+                        variants={slideInImageVariants}
+                    >
                         <Image
                             src={rocket}
                             mt={"70px"}
@@ -369,6 +497,7 @@ const Home: React.FC = () => {
                             objectFit={"cover"}
                             borderRadius={"3xl"}
                         />
+                    </motion.div>
                     {/* </ScrollAnimation> */}
                 </Flex>
             </Flex>
@@ -389,6 +518,12 @@ const Home: React.FC = () => {
                     pl={"101px"}
                 >
                     {/* <ScrollAnimation animateIn='bounceInLeft' animateOnce> */}
+                    <motion.div
+                        ref={containerRef}
+                        initial="hidden"
+                        animate={controls}
+                        variants={slideInVariants}
+                    >
                         <Image
                             src={getloan}
                             mt={"-40px"}
@@ -397,49 +532,57 @@ const Home: React.FC = () => {
                         // objectFit={"cover"}
                         // borderRadius={"3xl"}
                         />
+                    </motion.div>
                     {/* </ScrollAnimation> */}
                 </Flex>
-                <Flex
-                    w={["90vw", "", "400px", "500px"]}
-                    flexDir={"column"}
-                    mt={["40px", "", "20px", "40px"]}
+                <motion.div
+                    ref={imageRef}
+                    initial="hidden"
+                    animate={controls}
+                    variants={slideInImageVariants}
                 >
                     <Flex
-                        mb={"20px"}
-                        flexDir={"row"}
-                        align={"center"}
+                        w={["90vw", "", "400px", "500px"]}
+                        flexDir={"column"}
+                        mt={["40px", "", "20px", "40px"]}
                     >
-                        <Box
-                            w={"50px"}
-                            bg={"#808080"}
-                            h={"2px"}
-                            borderRadius={"5px"}
-                            mr={"12px"}
-                        />
-                        <Text
-                            color={"#010101"}
+                        <Flex
+                            mb={"20px"}
+                            flexDir={"row"}
+                            align={"center"}
                         >
-                            02
+                            <Box
+                                w={"50px"}
+                                bg={"#808080"}
+                                h={"2px"}
+                                borderRadius={"5px"}
+                                mr={"12px"}
+                            />
+                            <Text
+                                color={"#010101"}
+                            >
+                                02
+                            </Text>
+                        </Flex>
+                        <Heading
+                            fontFamily={"Poppins"}
+                            fontSize={["50px", "36px", "42px", "48px", "50px"]}
+                            fontWeight={700}
+                            lineHeight={["60px", "70px", "70px", "90px"]}
+                            color={"#412D95"}
+                        >
+                            Get Quick And Safe Loan
+                        </Heading>
+                        <Text
+                            fontSize={"18px"}
+                            fontWeight={300}
+                            mt={"20px"}
+                        >
+                            Secure fast loans with ease on Padi4Life, for a convenient and
+                            safe borrowing experience and satisfy your financial needs.
                         </Text>
                     </Flex>
-                    <Heading
-                        fontFamily={"Poppins"}
-                        fontSize={["50px", "36px", "42px", "48px", "50px"]}
-                        fontWeight={700}
-                        lineHeight={["60px", "70px", "70px", "90px"]}
-                        color={"#412D95"}
-                    >
-                        Get Quick And Safe Loan
-                    </Heading>
-                    <Text
-                        fontSize={"18px"}
-                        fontWeight={300}
-                        mt={"20px"}
-                    >
-                        Secure fast loans with ease on Padi4Life, for a convenient and
-                        safe borrowing experience and satisfy your financial needs.
-                    </Text>
-                </Flex>
+                </motion.div>
             </Flex>
             <Flex
                 mt={"60px"}
@@ -448,47 +591,54 @@ const Home: React.FC = () => {
                 justifyContent={["center", "space-between"]}
                 mb={"80px"}
             >
-                <Flex
-                    w={["95vw", "500px"]}
-                    flexDir={"column"}
-                    mt={"40px"}
+                <motion.div
+                    ref={containerRef}
+                    initial="hidden"
+                    animate={controls}
+                    variants={slideInVariants}
                 >
                     <Flex
-                        mb={"20px"}
-                        flexDir={"row"}
-                        align={"center"}
+                        w={["95vw", "500px"]}
+                        flexDir={"column"}
+                        mt={"40px"}
                     >
-                        <Box
-                            w={"50px"}
-                            bg={"#808080"}
-                            h={"2px"}
-                            borderRadius={"5px"}
-                            mr={"12px"}
-                        />
-                        <Text
-                            color={"#010101"}
+                        <Flex
+                            mb={"20px"}
+                            flexDir={"row"}
+                            align={"center"}
                         >
-                            03
+                            <Box
+                                w={"50px"}
+                                bg={"#808080"}
+                                h={"2px"}
+                                borderRadius={"5px"}
+                                mr={"12px"}
+                            />
+                            <Text
+                                color={"#010101"}
+                            >
+                                03
+                            </Text>
+                        </Flex>
+                        <Heading
+                            fontFamily={"Poppins"}
+                            fontSize={["50px", "36px", "42px", "48px", "50px"]}
+                            fontWeight={700}
+                            lineHeight={["60px", "70px", "70px", "90px"]}
+                            color={"#412D95"}
+                        >
+                            Manage Your Funds Perfectly
+                        </Heading>
+                        <Text
+                            fontSize={"18px"}
+                            fontWeight={300}
+                            mt={"20px"}
+                        >
+                            Effortlessly optimize your finances with Padi4Life with tools and insights
+                            for flawless money management, making every dollar count
                         </Text>
                     </Flex>
-                    <Heading
-                        fontFamily={"Poppins"}
-                        fontSize={["50px", "36px", "42px", "48px", "50px"]}
-                        fontWeight={700}
-                        lineHeight={["60px", "70px", "70px", "90px"]}
-                        color={"#412D95"}
-                    >
-                        Manage Your Funds Perfectly
-                    </Heading>
-                    <Text
-                        fontSize={"18px"}
-                        fontWeight={300}
-                        mt={"20px"}
-                    >
-                        Effortlessly optimize your finances with Padi4Life with tools and insights
-                        for flawless money management, making every dollar count
-                    </Text>
-                </Flex>
+                </motion.div>
                 <Flex
                     w={["95vw", "500px"]}
                     bgImage={connect}
@@ -498,14 +648,21 @@ const Home: React.FC = () => {
                     overflow={"clip"}
                 >
                     {/* <ScrollAnimation animateIn='bounceInRight' animateOnce> */}
-                    <Image
-                        src={manage}
-                        mt={"50px"}
-                        w={"400px"}
-                        h={"714px"}
-                        objectFit={"cover"}
-                        borderRadius={"3xl"}
-                    />
+                    <motion.div
+                        ref={imageRef}
+                        initial="hidden"
+                        animate={controls}
+                        variants={slideInImageVariants}
+                    >
+                        <Image
+                            src={manage}
+                            mt={"50px"}
+                            w={"400px"}
+                            h={"714px"}
+                            objectFit={"cover"}
+                            borderRadius={"3xl"}
+                        />
+                    </motion.div>
                     {/* </ScrollAnimation> */}
                 </Flex>
             </Flex>
